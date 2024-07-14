@@ -1,0 +1,31 @@
+﻿@model List<MenuModel>
+
+@{
+    Layout = "_AdminLayout";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col" width="20%">Id</th>
+            <th scope="col" width="20%">Kategori</th>
+            <th scope="col" width="20%">Yemek</th>
+            <th scope="col" width="20%">Fiyat</th>
+            <th scope="col" width="20%">#</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var menu in Model)
+        {
+            <tr>
+                <td>@menu.Id</td>
+                <td>@menu.CategoryName</td>
+                <td>@menu.Name</td>
+                <td>@menu.Price</td>
+                <td>
+                    <a href="/admin/duzenle/@menu.Id" class="btn btn-primary">Düzenle</a>
+                    <a href="/admin/sil/@menu.Id" onclick="return confirm('Emin misin?')" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

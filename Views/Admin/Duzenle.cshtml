@@ -1,0 +1,36 @@
+﻿@model MenuModel
+@{
+    Layout = "_AdminLayout";
+}
+<h2 class="mb-4">Menü Düzenle</h2>
+
+<form class="row g-3" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label class="form-label">Ürün Adı</label>
+        <input required type="text" value="@Model.Name" class="form-control" name="Name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Ürün Detayı</label>
+        <input type="text" value="@Model.Detail" class="form-control" name="Detail">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Fiyat</label>
+        <input required type="number" value="@Model.Price" class="form-control" name="Price">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Kategori</label>
+        <select id="CategoryName" name="CategoryId">
+            @foreach (var category in ViewBag.Categories)
+            {
+                <option selected="@(category.Id == Model.CategoryId ? "selected" : null)" value="@category.Id">@category.CategoryName</option>
+            }
+        </select>
+    </div>
+    <input type="image" src="/uploads/@Model.ImgUrl" name="Image" style="height:200px; width:400px" /> 
+
+    <input type="file" name="Image" @* multiple *@ accept="image/png, image/jpeg" />
+
+    <input type="hidden" name="ImgUrl" value="@Model.ImgUrl" />
+
+    <button class="btn btn-success">Düzenle</button>
+</form>

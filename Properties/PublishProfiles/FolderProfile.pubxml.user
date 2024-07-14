@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\kadir\Desktop\works\SQL\Menu\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2024-07-13T21:50:10.0310559Z;True|2024-07-13T01:51:54.5844388+03:00;True|2024-07-13T01:37:44.1454124+03:00;True|2024-07-13T01:11:43.5165596+03:00;True|2024-07-12T02:14:58.6405902+03:00;True|2024-07-12T02:08:53.2028475+03:00;True|2024-07-12T02:04:07.7498213+03:00;True|2024-07-11T17:52:10.4986224+03:00;True|2024-07-11T17:48:48.7658127+03:00;True|2024-07-11T17:41:40.5611500+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,40 @@
+﻿@model List<MenuModel>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+
+<div class="container">
+    <form class="row g-3 mb-1" method="post" action="/Admin/Ekle" autocomplete="off" enctype="multipart/form-data">
+       
+        <label for="Name">Ürün Adı</label>
+        <input type="text" class="form-control" style="background-color: white" name="Name" required placeholder="Ürün Adı" />
+
+        <label for="Detail">Detay</label>
+        <input type="text" class="form-control" style="background-color: white" name="Detail" placeholder="Ürün Detayı" />
+
+
+        <label for="Price">Fiyat</label>
+        <input type="number" class="form-control" style="background-color: white" name="Price" required placeholder="Fiyat" />
+        <label class="form-label">Kategori</label>
+        <select id="CategoryName" name="CategoryId">
+            @foreach (var category in Model)
+            {
+                <option value="@category.Id">@category.CategoryName</option>
+            }
+        </select>
+
+        <label for="Image">Fotoğraf</label>
+        <input type="file" name="Image" accept="image/png, image/jpeg" />
+
+        <button class="btn btn-primary">Ekle</button>
+
+        @if (ViewData["Mesaj"] != null)
+        {
+            <div class="alert alert-primary" role="alert">
+                @ViewData["Mesaj"]
+            </div>
+        }
+    </form>
+</div>

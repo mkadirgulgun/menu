@@ -1,0 +1,90 @@
+﻿<style>
+    form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+media (max-width: 768px) {
+    .col-md-6, .col-md-4, .col-12 {
+        width: 100%;
+    }
+}
+
+</style>
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="Email" class="form-label">Email</label>
+            <input required type="email" class="form-control" name="Email">
+        </div>
+        <div class="col-md-6">
+            <label for="UserName" class="form-label">Kullanıcı Adı</label>
+            <input required type="text" class="form-control" name="UserName">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Şifre</label>
+            <input required type="password" class="form-control" name="Password">
+        </div>
+        <div class="col-md-4">
+            <label for="Gender" class="form-label">Cinsiyet</label>
+            <select required name="Gender" class="form-select">
+                <option selected disabled>Seçiniz</option>
+                <option>Erkek</option>
+                <option>Kadın</option>
+                <option>Belirtmek istemiyorum</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+        </div>
+    </div>
+    @ViewData["Msg"]
+</form>
